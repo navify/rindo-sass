@@ -1,0 +1,10 @@
+contact_links:
+  - name: 💻 Rindo
+    url: https://github.com/navify/rindo/issues/new/choose
+    about: This issue tracker is not for Rindo compiler issues. Please file compiler issues on the Rindo repo.
+  - name: 📚 Documentation
+    url: https://github.com/navify/rindo-site/issues/new/choose
+    about: This issue tracker is not for documentation issues. Please file documentation issues on the Rindo site repo.
+  - name: 📝 Create Rindo CLI
+    url: https://github.com/navify/create-rindo/issues/new/choose
+    about: This issue tracker is not for Create Rindo CLI issues. Please file CLI issues on the Create Rindo CLI repo.

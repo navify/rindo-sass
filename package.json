@@ -1,0 +1,64 @@
+{
+  "name": "@rindo/sass",
+  "version": "1.5.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "prettier": "prettier --write 'src/**/*.ts'",
+    "prettier.dry-run": "prettier --check 'src/**/*.ts'",
+    "build": "npm run prebuild && tsc && npm run rollup",
+    "watch": "tsc --watch",
+    "rollup": "rollup -c rollup.config.js",
+    "version": "npm run build",
+    "release": "np",
+    "test": "jest",
+    "test.ci": "npm run test && npm run prettier.dry-run",
+    "test.watch": "jest --watch"
+  },
+  "peerDependencies": {
+    "@rindo/core": ">=2.16.0"
+  },
+  "devDependencies": {
+    "@navify/prettier-config": "^2.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.5",
+    "@rindo/core": "^2.17.0",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.17.18",
+    "@types/sass": "^1.16.0",
+    "jest": "^26.6.3",
+    "np": "^7.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.33.1",
+    "prettier": "^2.2.1",
+    "sass": "^1.29.0",
+    "terser": "^5.3.8",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navify/rindo-sass.git"
+  },
+  "author": "Navify Team",
+  "homepage": "https://rindojs.com/",
+  "description": "The Rindo Sass Plugin",
+  "keywords": [
+    "rindo",
+    "sass"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testURL": "http://localhost"
+  },
+  "prettier": "@navify/prettier-config",
+  "volta": {
+    "node": "16.15.0",
+    "npm": "8.11.0"
+  }
+}
