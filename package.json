@@ -1,0 +1,54 @@
+{
+  "name": "@rindo/sass",
+  "version": "1.3.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "prebuild": "rimraf ./dist",
+    "build": "tsc && npm run rollup && npm run test",
+    "watch": "tsc --watch",
+    "rollup": "rollup -c rollup.config.js",
+    "version": "npm run build",
+    "release": "np --any-branch",
+    "test": "jest",
+    "test.watch": "jest --watch"
+  },
+  "peerDependencies": {
+    "@rindo/core": "^1.8.12"
+  },
+  "devDependencies": {
+    "@rindo/core": "^1.17.4",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@types/jest": "24.9.1",
+    "@types/node": "13.9.8",
+    "@types/sass": "1.16.0",
+    "jest": "24.9.0",
+    "np": "6.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.17.1",
+    "sass": "1.26.8",
+    "terser": "^4.8.0",
+    "ts-jest": "^24.3.0",
+    "typescript": "3.9.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navify/rindo-sass.git"
+  },
+  "author": "Navify Team",
+  "homepage": "https://rindojs.web.app/",
+  "description": "The Rindo Sass Plugin",
+  "keywords": [
+    "rindo",
+    "sass"
+  ],
+  "jest": {
+    "preset": "ts-jest",
+    "testURL": "http://localhost"
+  }
+}
